@@ -1,0 +1,523 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        #f4f7fb;
+
+    color:
+        #1f2937;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+
+    background:
+        #111827;
+
+    color:
+        white;
+
+    padding:
+        24px 8%;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+}
+
+
+.header h1 {
+
+    margin:
+        0;
+
+    font-size:
+        26px;
+
+}
+
+
+.header p {
+
+    margin-top:
+        8px;
+
+    color:
+        #cbd5e1;
+
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+}
+
+
+.status-dot {
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    border-radius:
+        50%;
+
+    background:
+        #f59e0b;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+
+    width:
+        90%;
+
+    max-width:
+        1000px;
+
+    margin:
+        40px auto;
+
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.question-card,
+.result-card {
+
+    background:
+        white;
+
+    border-radius:
+        14px;
+
+    padding:
+        30px;
+
+    margin-bottom:
+        25px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.question-card h2,
+.answer-section h2 {
+
+    margin-top:
+        0;
+
+}
+
+
+.subtitle {
+
+    color:
+        #64748b;
+
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+textarea {
+
+    width:
+        100%;
+
+    resize:
+        vertical;
+
+    border:
+        1px solid #cbd5e1;
+
+    border-radius:
+        10px;
+
+    padding:
+        15px;
+
+    font-size:
+        16px;
+
+    margin-top:
+        15px;
+
+    outline:
+        none;
+
+}
+
+
+textarea:focus {
+
+    border-color:
+        #2563eb;
+
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+button {
+
+    margin-top:
+        15px;
+
+    background:
+        #2563eb;
+
+    color:
+        white;
+
+    border:
+        none;
+
+    border-radius:
+        9px;
+
+    padding:
+        12px 25px;
+
+    font-size:
+        16px;
+
+    cursor:
+        pointer;
+
+}
+
+
+button:hover {
+
+    background:
+        #1d4ed8;
+
+}
+
+
+button:disabled {
+
+    opacity:
+        0.6;
+
+    cursor:
+        not-allowed;
+
+}
+
+
+/* =========================================================
+   METADATA
+   ========================================================= */
+
+.metadata {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        15px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.metadata-item {
+
+    background:
+        #f8fafc;
+
+    border-radius:
+        10px;
+
+    padding:
+        15px;
+
+}
+
+
+.label {
+
+    display:
+        block;
+
+    font-size:
+        13px;
+
+    color:
+        #64748b;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+.badge {
+
+    font-weight:
+        bold;
+
+}
+
+
+/* =========================================================
+   ANSWER
+   ========================================================= */
+
+.answer {
+
+    background:
+        #f8fafc;
+
+    border-left:
+        4px solid #2563eb;
+
+    padding:
+        20px;
+
+    line-height:
+        1.7;
+
+    border-radius:
+        6px;
+
+}
+
+
+/* =========================================================
+   CRITIC
+   ========================================================= */
+
+.critic-section {
+
+    margin-top:
+        25px;
+
+    padding:
+        18px;
+
+    background:
+        #f8fafc;
+
+    border-radius:
+        10px;
+
+}
+
+
+.critic-section p {
+
+    color:
+        #475569;
+
+}
+
+
+/* =========================================================
+   SOURCES
+   ========================================================= */
+
+.sources-section {
+
+    margin-top:
+        25px;
+
+}
+
+
+.sources-section ul {
+
+    padding-left:
+        20px;
+
+}
+
+
+.sources-section li {
+
+    margin-bottom:
+        8px;
+
+    color:
+        #475569;
+
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.loading {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        20px;
+
+    color:
+        #475569;
+
+}
+
+
+.spinner {
+
+    width:
+        20px;
+
+    height:
+        20px;
+
+    border:
+        3px solid #cbd5e1;
+
+    border-top:
+        3px solid #2563eb;
+
+    border-radius:
+        50%;
+
+    animation:
+        spin 1s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+.hidden {
+
+    display:
+        none;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    text-align:
+        center;
+
+    padding:
+        30px;
+
+    color:
+        #64748b;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+    max-width: 700px
+) {
+
+    .header {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            15px;
+
+    }
+
+
+    .metadata {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}

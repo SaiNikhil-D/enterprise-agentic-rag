@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Enterprise Knowledge Intelligence
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="header">
+
+        <div>
+
+            <h1>
+                Enterprise Knowledge Intelligence
+            </h1>
+
+            <p>
+                Agentic RAG • Multi-Agent AI System
+            </p>
+
+        </div>
+
+
+        <div class="status">
+
+            <span
+                id="statusDot"
+                class="status-dot"
+            ></span>
+
+            <span id="statusText">
+                Checking API...
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="container">
+
+
+        <!-- =================================================
+             QUESTION SECTION
+             ================================================= -->
+
+        <section class="question-card">
+
+            <h2>
+                Ask your enterprise assistant
+            </h2>
+
+            <p class="subtitle">
+
+                Ask questions about company policies,
+                employee data, or current information.
+
+            </p>
+
+
+            <textarea
+                id="question"
+                placeholder="Example: How many annual leave days do employees receive?"
+                rows="4"
+            ></textarea>
+
+
+            <button
+                id="askButton"
+                onclick="askQuestion()"
+            >
+
+                Ask AI
+
+            </button>
+
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+
+                <div class="spinner"></div>
+
+                <span>
+                    AI agents are processing your question...
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESULT SECTION
+             ================================================= -->
+
+        <section
+            id="resultSection"
+            class="result-card hidden"
+        >
+
+
+            <!-- Agent information -->
+
+            <div class="metadata">
+
+
+                <div class="metadata-item">
+
+                    <span class="label">
+                        Agent
+                    </span>
+
+                    <span
+                        id="agent"
+                        class="badge"
+                    >
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="metadata-item">
+
+                    <span class="label">
+                        Verification
+                    </span>
+
+                    <span
+                        id="verification"
+                        class="badge"
+                    >
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="metadata-item">
+
+                    <span class="label">
+                        Confidence
+                    </span>
+
+                    <span
+                        id="confidence"
+                        class="badge"
+                    >
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="metadata-item">
+
+                    <span class="label">
+                        Retries
+                    </span>
+
+                    <span
+                        id="retries"
+                        class="badge"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Answer -->
+
+            <div class="answer-section">
+
+                <h2>
+                    Answer
+                </h2>
+
+                <div
+                    id="answer"
+                    class="answer"
+                ></div>
+
+            </div>
+
+
+            <!-- Critic -->
+
+            <div
+                id="criticSection"
+                class="critic-section"
+            >
+
+                <h3>
+                    🔍 Verification
+                </h3>
+
+                <p id="critic"></p>
+
+            </div>
+
+
+            <!-- Sources -->
+
+            <div
+                id="sourcesSection"
+                class="sources-section"
+            >
+
+                <h3>
+                    📚 Sources
+                </h3>
+
+                <ul id="sources"></ul>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Enterprise Agentic RAG •
+            Powered by LangGraph + FastAPI
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
